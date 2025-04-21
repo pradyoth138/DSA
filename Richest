@@ -1,0 +1,32 @@
+public class Richest {
+	
+	public static int Rich(int [][] account) {
+		
+		int maxwealthofp=0;
+		
+		for(int i=0;i<account.length;i++) {
+			 int maxwealth=0;
+			
+			for(int j=0;j<account[i].length;j++) {
+				maxwealth+=account[i][j];
+			}
+			if(maxwealth>maxwealthofp) {
+				maxwealthofp=maxwealth;
+			}
+		}
+		return maxwealthofp;
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int [] [] account= {{1,5},
+				            {7,3},
+		                    {3,5}
+	                        };
+		
+		int res=Rich(account);
+		
+		System.out.println(res);
+
+     }
+}
