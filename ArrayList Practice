@@ -1,0 +1,34 @@
+package arrays;
+
+import java.util.ArrayList;
+
+public class ArrayListSearching {
+
+    public static void main(String[] args) {
+        
+        ArrayList<String> names = new ArrayList<String>();
+        names.add("Pradyoth");
+        names.add("raju");
+        names.add("bablu");
+        names.add("vaidesh");
+        names.add("medesh");
+
+        System.out.println(names);
+        
+        System.out.println(names.get(2)); // prints "bablu"
+        System.out.println(names.set(1, "sonu")); // replaces "raju" with "sonu"
+        System.out.println(names);
+        
+        String s = names.remove(3); // removes "vaidesh"
+        System.out.println(names);
+
+        for (String a : names) {
+            if (a.equals("medesh")) {
+                System.out.println("Element is found");
+                break;
+            }
+        }
+
+        System.out.println(names.size()); // prints size of the list
+    }
+}
