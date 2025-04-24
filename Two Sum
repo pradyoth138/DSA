@@ -1,0 +1,44 @@
+public class Two_Sum {
+	public static int [] Tar (int[] arr,int target) {
+		
+		for(int i=0;i<arr.length;i++) {
+			for(int j=i+1;j<arr.length;j++) {
+				if(arr[i]+arr[j]==target) {
+					return new int[] {i,j};
+				}
+			}
+		}
+		return new int[] {};
+		
+	}	
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		int [] arr= {2,7,11,15};
+		int target=9;
+		
+		int[] result = Tar(arr, target);
+        // Print the indices of the two numbers
+        if (result.length == 2) {
+            System.out.println("Indices: [" + result[0] + ", " + result[1] + "]");
+        } else {
+            System.out.println("No solution found.");
+        }
+
+	}
+
+}
+
+Two Sum Problem
+Write a Java program to find two numbers in an array that add up to a specific target.
+
+The program takes an array of integers and a target value.
+
+It uses two nested loops to check every possible pair of numbers in the array.
+
+If a pair is found that adds up to the target, it returns their indices.
+
+If no such pair exists, it returns an empty array.
+
+Example: For input array {2, 7, 11, 15} and target 9, it returns indices [0, 1] because 2 + 7 = 9.
